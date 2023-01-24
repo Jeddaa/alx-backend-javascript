@@ -1,5 +1,3 @@
-/** @format */
-
 export default function createIteratorObject(report) {
   const newList = [];
   for (const x of Object.values(report.allEmployees)) {

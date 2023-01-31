@@ -1,3 +1,6 @@
+/* eslint-disable max-classes-per-file */
+/* eslint-disable no-underscore-dangle */
+
 export class HolbertonClass {
   constructor(year, location) {
     this._year = year;
@@ -14,7 +17,7 @@ export class HolbertonClass {
 }
 
 export class StudentHolberton {
-  constructor(firstName, lastName, holbertonClass) {
+  constructor(firstName, lastName, holbertonClass = HolbertonClass()) {
     this._firstName = firstName;
     this._lastName = lastName;
     this._holbertonClass = holbertonClass;
@@ -25,11 +28,11 @@ export class StudentHolberton {
   }
 
   get holbertonClass() {
-    return this._holbertonClass;
+    return this.holbertonClass;
   }
 
   get fullStudentDescription() {
-    return `${this._firstName} ${this._lastName} - ${this._holbertonClass.year} - ${this._holbertonClass.location}`;
+    return `${this._firstName} ${this._lastName} - ${this._holbertonClass._year} - ${this._holbertonClass._location}`;
   }
 }
 

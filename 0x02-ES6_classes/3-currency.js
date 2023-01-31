@@ -9,19 +9,19 @@ export default class Currency {
     return this._name;
   }
 
-  set name(n) {
-    this._name = n;
+  set name(value) {
+    this._name = value;
   }
 
   get code() {
     return this._code;
   }
 
-  set code(c) {
-    this._name = c;
+  set code(value) {
+    this._code = value;
   }
 
   displayFullCurrency() {
-    return `${this.name} (${this.code})`;
+    return `${this._name} (${this._code})`;
   }
 }

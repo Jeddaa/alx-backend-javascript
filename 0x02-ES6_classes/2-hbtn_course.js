@@ -23,17 +23,17 @@ export default class HolbertonCourse {
     return this._length;
   }
 
-  set length(val) {
-    if (!Number.isInteger(val)) throw new TypeError('length must be a number');
-    this._length = val;
+  set length(value) {
+    if (!Number.isInteger(value)) throw new TypeError('length must be an integer');
+    this._length = value;
   }
 
   get students() {
     return this._students;
   }
 
-  set students(val) {
-    if (!Array.isArray(val)) throw new TypeError('students type must be an Array');
-    this._students = val;
+  set students(value) {
+    if (!Array.isArray(value)) throw new TypeError('students type must be an array ');
+    this._students = value;
   }
 }
